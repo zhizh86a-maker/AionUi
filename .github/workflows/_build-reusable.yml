@@ -228,7 +228,7 @@ jobs:
           fi
 
       - name: Validate Sentry source map upload configuration
-        if: matrix.platform == 'linux-x64'
+        if: matrix.platform == 'linux-x64' && secrets.SENTRY_AUTH_TOKEN != ''
         shell: bash
         run: |
           set -euo pipefail
