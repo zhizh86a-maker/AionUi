@@ -229,8 +229,6 @@ jobs:
 
       - name: Validate Sentry source map upload configuration
         if: matrix.platform == 'linux-x64' && env.SENTRY_AUTH_TOKEN != ''
-        env:
-          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
         shell: bash
         run: |
           set -euo pipefail
