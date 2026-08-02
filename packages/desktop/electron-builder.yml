@@ -166,6 +166,7 @@ afterSign: scripts/afterSign.js
 linux:
   target:
     - deb
+    - rpm
   icon: resources/app.png
   artifactName: ${productName}-${version}-${os}-${arch}.${ext}
   category: Utility
